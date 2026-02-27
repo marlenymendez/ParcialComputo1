@@ -2,17 +2,34 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Calculadora de Salario con Horas Extra</title>
+    <title>Calculadora de Salario Semanal</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <h1>Calculadora de Salario</h1>
+    <div class="container">
+        <h1>Calculadora de Salario Semanal</h1>
 
-    <mi-salario></mi-salario>
+        <form id="formSalario">
+            <input type="number" id="salarioBase" placeholder="Salario por hora ($)">
+            
+            <input type="number" id="horasNormales" placeholder="Horas normales trabajadas">
+            
+            <input type="number" id="horasExtra" placeholder="Horas extra trabajadas">
 
-    <script src="componente-salario.js"></script>
+            <label>Tipo de jornada para horas extra:</label>
+            <select id="tipoJornada">
+                <option value="">Seleccione una opción</option>
+                <option value="diurna">Diurna (25% adicional)</option>
+                <option value="nocturna">Nocturna (50% adicional)</option>
+            </select>
+
+            <button type="submit">Calcular Salario</button>
+        </form>
+
+        <div class="resultado" id="resultado"></div>
+    </div>
+
     <script src="app.js"></script>
-
 </body>
 </html>
